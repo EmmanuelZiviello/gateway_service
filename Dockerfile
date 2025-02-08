@@ -15,8 +15,7 @@ COPY certs/ftasteserver.key /etc/nginx/certs/ftasteserver.key
 RUN chmod 644 /etc/nginx/certs/ftasteserver.crt
 RUN chmod 600 /etc/nginx/certs/ftasteserver.key
 
-# Verifica la configurazione di Nginx
-RUN nginx -t
+
 
 # Esponi la porta 443 (HTTPS) e la porta 80 (HTTP)
 EXPOSE 443

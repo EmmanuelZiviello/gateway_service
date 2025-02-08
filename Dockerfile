@@ -4,7 +4,7 @@ FROM nginx:1.25
 # Rimuovi la configurazione di default di Nginx
 RUN rm /etc/nginx/conf.d/default.conf
 
-# Copia la tua configurazione personalizzata di Nginx
+# Copia la tua configurazione personalizzata di Nginx nella posizione corretta
 COPY conf/nginx.conf /etc/nginx/nginx.conf
 
 # Copia i certificati SSL
@@ -24,3 +24,4 @@ EXPOSE 80
 
 # Comando di default per avviare Nginx
 CMD ["nginx", "-g", "daemon off;"]
+
